@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OgrenciModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityType Name="Baglama">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="OgrenciId" Type="nchar" MaxLength="10" />
+          <Property Name="DersID" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Dersler">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="DersKodu" Type="nchar" MaxLength="10" />
+          <Property Name="DersAdı" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="OgrenciTablosu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="OgrenciAd" Type="nchar" MaxLength="10" />
+          <Property Name="OgrenciSoad" Type="nchar" MaxLength="10" />
+          <Property Name="OgrenciNo" Type="nchar" MaxLength="10" />
+          <Property Name="TC" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="OgrenciModelStoreContainer">
+          <EntitySet Name="Baglama" EntityType="Self.Baglama" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Dersler" EntityType="Self.Dersler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OgrenciTablosu" EntityType="Self.OgrenciTablosu" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OgrenciModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="OgrenciEntities" >
+          <EntitySet Name="Baglamas" EntityType="OgrenciModel.Baglama" />
+          <EntitySet Name="Derslers" EntityType="OgrenciModel.Dersler" />
+          <EntitySet Name="OgrenciTablosus" EntityType="OgrenciModel.OgrenciTablosu" />
+        </EntityContainer>
+        <EntityType Name="Baglama">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="OgrenciId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="DersID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Dersler">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="DersKodu" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="DersAdı" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="OgrenciTablosu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="OgrenciAd" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="OgrenciSoad" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="OgrenciNo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TC" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="OgrenciModelStoreContainer" CdmEntityContainer="OgrenciEntities" >
+          <EntitySetMapping Name="Baglamas">
+            <EntityTypeMapping TypeName="OgrenciModel.Baglama">
+              <MappingFragment StoreEntitySet="Baglama">
+                <ScalarProperty Name="DersID" ColumnName="DersID" />
+                <ScalarProperty Name="OgrenciId" ColumnName="OgrenciId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Derslers">
+            <EntityTypeMapping TypeName="OgrenciModel.Dersler">
+              <MappingFragment StoreEntitySet="Dersler">
+                <ScalarProperty Name="DersAdı" ColumnName="DersAdı" />
+                <ScalarProperty Name="DersKodu" ColumnName="DersKodu" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OgrenciTablosus">
+            <EntityTypeMapping TypeName="OgrenciModel.OgrenciTablosu">
+              <MappingFragment StoreEntitySet="OgrenciTablosu">
+                <ScalarProperty Name="TC" ColumnName="TC" />
+                <ScalarProperty Name="OgrenciNo" ColumnName="OgrenciNo" />
+                <ScalarProperty Name="OgrenciSoad" ColumnName="OgrenciSoad" />
+                <ScalarProperty Name="OgrenciAd" ColumnName="OgrenciAd" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

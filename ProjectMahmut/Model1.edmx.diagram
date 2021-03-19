@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="78eab089e69a4f12840eecaef1eb6bcb" Name="Diagram1" >
+        <EntityTypeShape EntityType="OgrenciModel.Baglama" Width="1.25" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OgrenciModel.Dersler" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="OgrenciModel.OgrenciTablosu" Width="1.5" PointX="0.75" PointY="3" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
