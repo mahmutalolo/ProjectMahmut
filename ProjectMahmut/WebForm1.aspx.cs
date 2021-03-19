@@ -35,7 +35,7 @@ namespace ProjectMahmut
         protected void Button1_Click(object sender, EventArgs e)
         {
             lblUyari.Visible = true;
-            lblUyari.Text = "Program Kurulum yaparken sorun yaşadım, özellikle TELERİK ile ilgili çok sorun yaşadım, kurlulum düzelince daha hızlı ilerliceğim";
+            lblUyari.Text = " Program Kurulum yaparken sorun yaşadım, özellikle TELERİK ile ilgili çok sorun yaşadım, kurlulum düzelince daha hızlı ilerliceğim";
         }
     }
 }
